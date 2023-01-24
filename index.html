@@ -1,0 +1,45 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="main">
+            <div id="timer" class="score-board"> </div>
+        <div class="container">
+            <!-- <div class="inner-container">  -->
+                <div class="home-guest home" id="home" data-id="1">
+                <h3 class="heading">HOME</h3>
+                <div class="score-board home-board"> 
+                    <p class="score"  id="home-score">
+                        
+                    </p> </div>
+                <div class="btns"> 
+                    <button onclick="addOne(1)"> +1 </button>
+                    <button onclick="addTwo(2)"> +2 </button>
+                    <button onclick="addThree(3)"> +3 </button>
+                </div>
+            </div>
+            <div class="home-guest" id="away">
+                <h3 class="heading">GUEST</h3>
+                 <div  class="score-board guest-board">  
+                     <p id="guest-score" class="score"></p> 
+                 </div>
+                  <div class="btns"> 
+                    <button onclick="addOne()"> +1 </button>
+                    <button onclick="addTwo()"> +2 </button>
+                    <button onclick="addThree()"> +3 </button>
+                </div>
+            </div>
+            
+            <!-- </div> -->
+        </div>
+        <div id="msg"> </div>
+          <div class=" btns games">
+      <button  id ="new-btn" onclick="reset()" class=" btns">New Game</button>
+      <button  id ="end-btn" class="btns" onclick="endgame()">End Game</button>
+    </div>
+            <div class="btns reset" id="resets" onclick="reset()"> <button> Reset</button></div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
