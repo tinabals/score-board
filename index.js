@@ -79,6 +79,7 @@ function endgame(){
 
 
 function reset(){
+    quit = false;
     homescore =   homeScoreBoard.textContent = 0;
     guestscore = guestScoreBoard.textContent = 0;  
         guestBoard.style.color = "#F94F6D"
