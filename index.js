@@ -5,7 +5,7 @@ let message = document.getElementById("msg")
 let guestBoard = document.querySelector(".guest-board")
 let homescore = homeScoreBoard.textContent = 0;
 let guestscore = guestScoreBoard.textContent = 0;
-
+let quit = false;
 
 
 function addOne(el){
@@ -61,20 +61,19 @@ function timer()
 }
 
 function endgame(){
-   
-    if (homescore > guestscore){
+       if (homescore > guestscore && quit == false){
         homeBoard.style.backgroundColor = "green"
         homeBoard.style.color = "white"
         msg.textContent = "HOME WINS"
-    } else if(guestscore > homescore){ 
+    } else if(guestscore > homescore  && quit == false){ 
         guestBoard.style.backgroundColor = "green"
         guestBoard.style.color = "white"
         msg.textContent = "GUEST WINS"
-    } else {
+    } else if(guestscore == home  && quit == false) {
         msg.textContent ="DRAW"
     }
-        clearInterval()
-        return;
+    clearInterval()
+    quit = true;  
 }
 
 
